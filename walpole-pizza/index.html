@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Pizza Restaurant in Walpole MA">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Link to blueimp gallery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-gallery/3.3.0/js/blueimp-gallery.min.js"
+        integrity="sha512-ou+HAocCH7k3ASCmn1jxK14HyDl7Ff0jci4skAEWcGKoLx32MPNOnLWaLh08XodPcaG59N9YsDyYN5+qPrR7Ag=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!--Link to local JS script-->
+    <script src="scripts/gallery.js"></script>
+
+    <!--Link to blueimp stylesheet-->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/blueimp-gallery/3.3.0/css/blueimp-gallery.min.css"
+        integrity="sha512-ZpixWcgC4iZJV/pBJcyuoyD9sUsW0jRVBBTDge61Fj99r1XQNv0LtVIrCwHcy61iVTM+/1cXXtak8ywIbyvOdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--link to local stylesheet-->
+    <link rel="stylesheet" href="styles/site.css">
+
+    <!--Adding a link to the site's favicon-->
+    <link rel="icon" href="images/favicon.ico">
+
+    <!--links to font family froom google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+
+    <title>Walpole-Pizza Home Page</title>
+
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <div class="main-banner-container">
+                <h1>Walpole Pizza</h1>
+            </div>
+        </a>
+        <div class="rest-of-header-container">
+            <div class="header-image">
+                <p class="image-text">image of a pizza margherita</p>
+            </div>
+            <div class="header-schedule-container">
+                <h2>Original Italian Pizza Recipes <br />Open 7 days a week</h2>
+                <ul class="schedule">
+                    <li>Friday - Sunday | 10:30AM - 11:00PM</li>
+                    <li>Monday - Thursday | 11:00AM - 10:00PM</li>
+                </ul>
+            </div>
+            <nav class="header-navigation-container">
+                <ul class="navigation">
+                    <li><a class="current-location" href="index.html">Home</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="kids-menu.html">Kids Menu</a></li>
+                    <li><a href="#">Order</a></li>
+                    <li><a href="#">Review Us</a></li>
+                    <li><a href="join-us.html">Join Us</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+    <main id="homepage-main">
+        <div class="home-main-container">
+            <article class="about-us">
+                <h3>About us:</h3>
+                <p>
+                    We bring the best Italian pizzas in Walpole and Boston area. Giuseppe, the owner,
+                    has a clear goal: <em><strong>"The best pizza or nothing"</strong></em>. He uses only original recipes passed over from one generation to the other in his family, which owns 2 restaurants in Italy.</p>
+
+                <p>
+                    Last year, chef <strong>Mario Muzzo</strong> from Pisa, Italy, joined Walpole-Pizza and since then, the daily visitors have trippled in number. He is the perfect match for Giuseppe's family recipes.</p>
+
+                <p>
+                    To create unique flavors, in addition to our local farm, we import some key ingredients from Italy. </p>
+
+            </article>
+
+            <article class="gallery-homepage">
+                <h3 class="gallery-heading">Click the images to start a slideshow of our signature pizzas</h3>
+
+            <ul class="gallery" id="gallery-links">
+                <li><a rel="gallery1" href="images/cheese-pizza-large.jpg"><img
+                            src="images/thumbs/cheese-thumb.png" alt="4cheese pizza thumbnail" /></a>
+                    <br />Quattro Formaggi
+                </li>
+
+                <li><a rel="gallery1" href="images/cherrytomato-mushroom-large.jpg"><img
+                            src="images/thumbs/cherrytomato-mushroom-thumb.png"
+                            alt="cherry tomatoes pizza thumbnail" /></a>
+                    <br />Cherry tomatoes & Mushroom
+                </li>
+
+                <li><a rel="gallery1" href="images/olives-sausage-tomatoes-large.jpg"><img
+                            src="images/thumbs/olives-sausage-tomatoes-thumb.png"
+                            alt="olives & sausage pizza thumbnail" /></a>
+                    <br />Olives & Sausages
+                </li>
+
+                <li><a rel="gallery1" href="images/pepperoni-classic-large.jpg"><img
+                            src="images/thumbs/pepperoni-classic-thumb.png" alt="pepperoni pizza thumbnail" /></a>
+                    <br />Pepperoni
+                </li>
+
+                <li><a rel="gallery1" href="images/pepperoni-olives-large.jpg"><img
+                            src="images/thumbs/pepperoni-olives-thumb.png"
+                            alt="pepperoni & olives pizza thumbnail" /></a>
+                    <br />Pepperoni & Olives
+                </li>
+
+                <li><a rel="gallery1" href="images/pizza-margherita-large.jpg"><img
+                            src="images/thumbs/margherita-thumb.png" alt="margherita pizza thumbnail" /></a>
+                    <br />Margherita
+                </li>
+            </ul>
+            </article>
+
+            <article class="customer-review">
+                <h3 class="review-heading">What our customers are saying:</h3>
+                <section>
+                    <h4 class="review-heading">Hit the spot!</h4>
+                    <p>Great atmosphere! We were tired of the tourist thing in Boston, and wanted a good pizza as it is meant to be. We had the best pizza we have ever here. Chef Mario must be an artist! The staff is very friendly, and service is excellent! Thank you!!
+                    <span class="customer-name">-Robert, D.</span></p>
+                </section>
+                <section>
+                    <h4 class="review-heading">Near Gillette? Try this place!</h4>
+                    <p>2nd time here. They remodeled and looked very nice. Pie is awesome. Crust slightly burnt yet "floppy" as I love. Texture gets more firm towards edge. Tomato sauce nice and rich and excellent toppings. Pizza has to be in my personal Top 5! 
+                    <span class="customer-name">-Sara, H.</span></p>
+                </section>
+                <section>
+                    <h4 class="review-heading">Great Experience!</h4>
+                    <p>Great Spectacular food. Everything here was excellent. The atmosphere is relaxed and the dining room is elegant without being stuffy. Service was very friendly. Definitely worth it. Great for special events too.
+                    <span class="customer-name">-John, A.</span></p>
+                </section>
+            </article>
+
+            <article class="special-deals">
+                <h3 class="specials-main-heading">Come visit us and take advantage of our amazing <em>SPECIALS!</em></h3>
+                <section class="deals">
+                    <h3>** Every Sat & Sun **</h3>
+                    <p>We believe weekend is family time. Enjoy the company of your loved ones with our generous offer: For every two family size pizzas, <strong>the third one is on us!</strong></p>
+                </section>
+                <section class="deals">
+                    <h3>** On Patriots Game Day **</h3>
+                    <p>It doesn't matter if you are angry or happy about the score!! You still need a boost to talk about it. All pizzas are <strong>15% off</strong>!! When Patriots win, all pizzas are at <strong>30% off</strong>!!! </p>
+                </section>
+                <section class="deals">
+                    <h3>** Everyday **</h3>
+                    <p>We are a great place to bring your kids. All pizzas are <strong>20% off for everyone under 18 years of age</strong>!!! That's right, all the week! Excludes pick-up and delivery!</p>
+                </section>   
+            </article>
+            <article class="special-coupons">
+                <h3 class="specials-main-heading">Weekly Coupons Waiting for You!</h3>
+                <section class="coupon">
+                    <h3>** Buy 1 & Get 1 more at half price **</h3>
+                    <p>This week's special coupon applies to any size pizzas! <strong>Includes delivery & pick-up orders. </strong></p>
+                </section>
+                <section class="coupon">
+                    <h3>** 2 large pizzas + 1 free **</h3>
+                    <p>Buy 2 large pizzas and the next one is on the house! With any order on <strong><em>Tue & Wed</em></strong>!!! </p>
+                </section>
+                <section class="coupon">
+                    <h3>** Sunday Party **</h3>
+                    <p>For every order of 5 pizzas or more we offer the drinks. <strong>Choose any combination of drinks as long as the price is half of the pizzas orderd.</strong></p>
+                </section>   
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-banner">
+            <h3>Walpole Pizza</h3>
+        </div>
+
+        <nav class="footer-navigation-container">
+            <ul class="navigation">
+                <li><a class="current-location" href="index.html">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="kids-menu.html">Kids Menu</a></li>
+                <li><a href="#">Order</a></li>
+                <li><a href="#">Review Us</a></li>
+                <li><a href="join-us.html">Join Us</a></li>
+            </ul>
+        </nav>
+        <div class="footer-info">
+            <address>
+                <p>940 Washington Street</p>
+                <p>Walpole, Massachusetts, 02081</p>
+                <p>Call: (617) 781-4444</p>
+                <p>email: <a href="#">info@walpolepizza.com</a></p>
+            </address>
+        </div>
+        <div class="footer-schedule-container">
+            <h3>Open 7 days a week</h3>
+            <p>Friday - Sunday | 10:30AM - 11:00PM</p>
+            <p>Monday - Thursday | 11:00AM - 10:00PM</p>
+        </div>
+        <div class="social-links">
+            <h3 class="footer-headings">Follow us on social media</h3>
+            <figure>
+                <img src="images/facebook-48px.png" alt="facebook icon" />
+                <figcaption><a href="#">Facebook</a></figcaption>
+            </figure>
+            <figure>
+                <img src="images/instagram-48px.png" alt="instagram icon" />
+                <figcaption><a href="#">Instagram</a></figcaption>
+            </figure>
+            <figure>
+                <img src="images/tweet-48px.png" alt="twitter icon" />
+                <figcaption><a href="#">Twitter</a></figcaption>
+            </figure>
+        </div>
+    </footer>
+
+    <!-- The Gallery as lightbox dialog, should be a document body child element -->
+    <div id="blueimp-gallery" class="blueimp-gallery" aria-label="image gallery" aria-modal="true" role="dialog">
+        <div class="slides" aria-live="polite"></div>
+        <h3 class="title">Gallery</h3>
+        <a class="prev" aria-controls="blueimp-gallery" aria-label="previous slide" aria-keyshortcuts="ArrowLeft"></a>
+        <a class="next" aria-controls="blueimp-gallery" aria-label="next slide" aria-keyshortcuts="ArrowRight"></a>
+        <a class="close" aria-controls="blueimp-gallery" aria-label="close" aria-keyshortcuts="Escape"></a>
+        <a class="play-pause" aria-controls="blueimp-gallery" aria-label="play slideshow" aria-keyshortcuts="Space"
+            aria-pressed="false" role="button"></a>
+        <ol class="indicator"></ol>
+    </div>
+</body>
+
+</html>

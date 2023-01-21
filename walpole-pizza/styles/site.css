@@ -1,0 +1,580 @@
+/* ------- Begin General styles for all pages --------*/
+:root {
+  --main-bg-color: rgb(215, 8, 8);
+  --second-bg-color: rgba(215, 8, 8, 0.66);
+  --current-location-color: yellow;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0 1%;
+  background-color: white;
+  color: black;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+}
+
+/* ------- Begin styles for the header ---------- */
+.main-banner-container {
+  background-color: var(--main-bg-color);
+  border-bottom: 4px solid black;
+  display: block;
+  margin: 0 auto;
+  padding: 1rem 0;
+  width: 100%;
+  height: auto;
+}
+
+/* Styles for the main banner */
+.main-banner-container h1 {
+  background-image: url(../images/walpole-pizza-banner.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 auto;
+  padding: 0.5rem 0;
+  text-align: center;
+  font-size: 3rem;
+  text-indent: -100em; /* hide the text from the screen */
+}
+
+header ul,
+footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.rest-of-header-container {
+  display: grid;
+  grid-gap: 0.5em;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas:
+    "img img schd schd schd schd schd"
+    "img img . . . . ."
+    "img img nav nav nav nav nav";
+  border-bottom: 4px solid black;
+}
+
+.header-image {
+  background-image: url(../images/header-img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-area: img;
+  background-color: white;
+}
+/* hide the image text from the screen */
+header .image-text {
+  text-indent: -100em;
+}
+
+.header-schedule-container {
+  grid-area: schd;
+  align-self: center;
+  background-color: white;
+}
+
+.header-schedule-container h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-variant: small-caps;
+  font-weight: bold;
+  background-color: green;
+  color: white;
+  text-shadow: 1px 2px black;
+
+}
+
+.header-schedule-container ul {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 0;
+}
+
+.header-navigation-container {
+  grid-area: nav;
+  background-color: white;
+  font-variant: small-caps;
+}
+
+/* Same styles for header and footer nav using navigation class */
+.navigation a:link,
+.navigation a:active,
+.navigation a:visited {
+  text-decoration: none;
+  color: white;
+  text-shadow: 1px 1px black;
+}
+
+.navigation li:hover {
+  background-color: green;
+  border: 3px solid black;
+}
+
+/* Styles to highlight the current page in the header and footer navigation bar */
+nav ul.navigation li a.current-location {
+  color: var(--current-location-color);
+  font-size: larger;
+  text-shadow: 2px 2px black;
+}
+
+/* Styles targeting both, header and footer navigation bar */
+nav ul.navigation {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0;
+  flex-shrink: 1;
+}
+
+header .navigation li {
+  background-color: var(--main-bg-color);
+  color: white;
+  border: none;
+  padding: 1rem 0;
+  margin: 0 0.35rem 0.25rem 0.35rem;
+  border-radius: 25px;
+  align-self: center;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  flex-basis: 14%;
+}
+
+/* ------- End styles for the header ---------- */
+
+/* ------- Begin styles for the footer ---------- */
+
+footer {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  font-size: 0.8rem;
+
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-areas:
+    "wp wp wp nav nav nav nav nav nav"
+    "addr addr addr sch sch sch social social social";
+  align-items: stretch;
+  border-bottom: 4px solid black;
+  border-top: 4px solid black;
+}
+
+.footer-banner {
+  grid-area: wp;
+  background-color: var(--main-bg-color);
+}
+
+.footer-banner h3 {
+  background-image: url(../images/walpole-pizza-banner.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--main-bg-color);
+  height: 100%;
+  text-align: center;
+  text-indent: -100em;
+}
+
+.footer-info {
+  grid-area: addr;
+  text-align: center;
+}
+
+.footer-schedule-container {
+  grid-area: sch;
+  align-self: center;
+  justify-self: stretch;
+  text-align: center;
+}
+
+.footer-navigation-container {
+  grid-area: nav;
+  font-variant: small-caps;
+}
+
+footer .navigation li {
+  background-color: var(--main-bg-color);
+  color: white;
+  border: none;
+  padding: 1rem 0;
+  margin: 0.25rem 0.3rem 0.25rem 0.3rem;
+  border-radius: 25px;
+  align-self: center;
+  text-align: center;
+  font-weight: bold;
+  flex-basis: 14%;
+}
+
+footer a:link,
+footer a:active,
+footer a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+footer a:hover {
+  font-size: 120%;
+  color: var(--second-bg-color);
+}
+
+.social-links {
+  grid-area: social;
+  text-align: center;
+}
+
+.social-links figure {
+  display: inline-block;
+  margin: 0.4rem;
+}
+/* ------- End styles for the footer ---------- */
+
+/* ------- End General styles for all pages ---------- */
+/*-----------------------------------------------------*/
+
+/* --------Begin styles for Join Us page -----------*/
+#join-us-main {
+  font-size: 110%;
+  background-color: white;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+form {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+form h2 {
+  font-size: 2.1rem;
+  font-weight: bold;
+  color: black;
+}
+
+form p:first-of-type {
+  font-size: 1.3rem;
+  font-weight: normal;
+  color: black;
+}
+
+/* Styles for the lists */
+form ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+fieldset {
+  width: 80%;
+  border: 3px solid black;
+  font-size: 110%;
+}
+
+legend {
+  font-size: 115%;
+  font-weight: bold;
+}
+
+form li {
+  padding-top: 0.5rem;
+}
+
+/* Styles for phone directions */
+#phone_format {
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+/* Styles to hide or show the upload option based on age */
+#no_upload_allowed {
+  display: none;
+}
+
+#ok_to_upload {
+  display: none;
+}
+
+/* Styles for file upload */
+#resume {
+  margin: 0.5rem 0.5rem 0.5rem 0;
+  padding: 0.5rem 0.5rem 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+/* Styles for submit button */
+#submit_application {
+  font-size: 1.2rem;
+  margin-top: 0.6rem;
+  margin-bottom: 1rem;
+  padding: 1%;
+}
+
+#submit_application:hover,
+#submit_application:active {
+  background-color: rgba(37, 150, 14, 0.872);
+}
+
+#show-submit {
+  margin-bottom: 0;
+  padding-bottom: 3rem;
+}
+
+/* Styles for the "*" asterisk */
+.asterisk {
+  color: black;
+  font-weight: bold;
+}
+
+/* Styles for validation errors */
+.error {
+  color: var(--second-bg-color);
+  font-weight: bold;
+  padding-left: 1rem;
+}
+
+/*---------End Styles for Join Us page -----------*/
+/*-------------------------------------------------*/
+
+/*----------Begin styles for Kids Menu page--------*/
+#kids-menu-main {
+  background-color: white;
+}
+#kids-menu-start {
+  margin-top: 1.5rem;
+  border-bottom: 3px solid black;
+  font-size: 150%;
+}
+
+#kids-menu-start p,
+#kids-menu-start h2 {
+  margin: 0;
+}
+
+/* Styles for menu items using grid */
+.kids-menu-all-items {
+  display: grid;
+  grid-gap: 1.5rem;
+  padding: 1.5rem 0;
+  grid-template-columns: repeat(2, 1fr);
+  font-size: 120%;
+}
+
+/* Styles for the single menu item using flex. Each item will contain an image,
+   a header including a title and price and, a small description. */
+.kids-menu-single-item {
+  display: flex;
+  border: 2px dashed black;
+}
+
+.kids-menu-item-text {
+  flex-grow: 1;
+}
+
+.kids-item-image {
+  width: 280px;
+  height: 280px;
+  margin-right: 1.5rem;
+  flex-shrink: 0;
+  object-fit: cover;
+  border-radius: 140px; /* make images look round */
+}
+
+/* this will separate the item title from the price */
+.kids-menu-item-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.kids-menu-item-title {
+  margin-right: 1.5rem;
+}
+
+.kids-menu-item-description {
+  line-height: 150%;
+}
+
+/*----------End styles for Kids Menu page--------*/
+/*-----------------------------------------------*/
+
+/*----------Begin styles for Home page------------*/
+
+#homepage-main {
+  background-color: white;
+}
+
+#homepage-main article {
+    font-size: 110%;
+}
+.home-main-container {
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-areas:
+    "about about about thumb thumb thumb thumb thumb thumb sp-deals sp-deals sp-deals"
+    "about about about thumb thumb thumb thumb thumb thumb sp-deals sp-deals sp-deals"
+    "review review review thumb thumb thumb thumb thumb thumb specials specials specials"
+    "review review review thumb thumb thumb thumb thumb thumb specials specials specials";
+
+  justify-content: space-around;
+}
+
+.gallery-homepage {
+  grid-area: thumb;
+}
+
+/* styles for About us and review areas */
+.about-us {
+  grid-area: about;
+  margin: 0.5rem 0 1rem 0;
+}
+
+.about-us,
+.customer-review {
+    padding: 0.5rem;
+}
+.about-us p {
+    margin-top: 0;
+    font-size: 1.1rem;
+    text-align: left;
+}
+.about-us h3:first-of-type,
+.customer-review h3:first-of-type {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    background-color: green;
+    border-radius: 20px;
+    color: white;
+    font-size: 130%;
+    font-variant: small-caps;
+    line-height: 2;
+    text-align: center;
+}
+
+.customer-review {
+    grid-area: review;
+    margin-bottom: 0.5rem;
+}
+
+.customer-review h3:first-of-type {
+    margin-top: 0;
+}
+.customer-review p {
+    font-style: italic;
+    line-height: 1.15rem;
+    text-align: left;
+    font-size: 0.9rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.review-heading {
+    margin-top: 1rem;
+    margin-bottom: 0;
+    padding-top: 0;
+}
+
+p span.customer-name {
+    float: right;
+    clear: both;
+    font-weight: bold;
+    font-style: italic;
+    margin: 0.5rem 0.5rem;
+}
+
+/* Styles for specials and coupons areas */
+
+.special-coupons {
+  grid-area: specials;
+}
+.special-deals {
+  grid-area: sp-deals;
+}
+ 
+
+.special-coupons,
+.special-deals {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 0;
+  padding: 0.5rem;
+}
+
+.specials-main-heading {
+    font-size: 120%;
+    font-weight: bold;
+    font-variant: small-caps;
+    text-align: center;
+    background-color: green;
+    color: white;
+    margin-top: 0;
+    padding: 0.5rem 0.25rem;
+    border-radius: 20px;
+}
+
+ section.coupon {
+    background-image: url(../images/coupons-bg-transparent-final.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black;
+    border: 4px dashed black;
+    padding: 0rem;
+    margin: 1rem 0;
+}
+
+.deals h3,
+.coupon h3 {
+    text-align: center;
+    font-size: 1rem;
+    font-variant: small-caps;
+    line-height: 2;
+    background-color: var(--main-bg-color);
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.deals p,
+.coupon p {
+    padding: 0;
+    margin-top: 0;
+    font-size: 0.8rem;
+}
+
+/* Styles for the gallery */
+
+.gallery-heading {
+    color: darkblue;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 1rem 1rem 0 1rem;
+    padding-bottom: 0;
+  }
+
+#homepage-main ul.gallery {
+  list-style: none;
+  padding: 0.5rem;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+#homepage-main ul.gallery li {
+  margin: 1rem;
+  font-size: 0.9rem;
+  font-style: italic;
+  text-align: center;
+  border: none;
+  margin: 1rem 1rem 2rem 1rem;
+  flex-basis: 40%;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+#homepage-main ul.gallery li img {
+  border: 3px solid black;
+}
+/*----------End styles for Home page--------------*/
+/*------------------------------------------------*/

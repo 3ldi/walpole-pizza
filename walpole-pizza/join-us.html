@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Pizza Restaurant in Walpole MA">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Link to jQuery library-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!--Link to jQuery Validation Plugin-->
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"
+        integrity="sha256-pUbM6BXNP8iq/7H+2IRHbnqiHMzdZZhb6VBLpRixVLo=" crossorigin="anonymous"></script>
+
+    <!--Link to jQuery additional methods, used for US phone number validation-->
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/additional-methods.js"
+        integrity="sha256-b9bXXYBS32FWp4OwjLyTOCR7IbHd+j3R3wc4yLP4BW0=" crossorigin="anonymous"></script>
+
+    <script>
+        /* This script will use event listeners on radio buttons and will give the user the option to upload a resume file only if user is at least 18 years old. The age is based on user's selection on radio buttons only. */
+        window.addEventListener('DOMContentLoaded', function () {
+            let err_msg = document.getElementById("no_upload_allowed");
+            let proceed = document.getElementById("ok_to_upload");
+
+            /* get #age_ok(radio button 'yes') and add click listener */
+            let inputYes = document.getElementById("age_ok");
+            inputYes.addEventListener("click", function () {
+                if (inputYes.checked == true) {
+                    /* display upload option */
+                    proceed.style.display = "block";
+
+                    /* hide error message */
+                    err_msg.style.display = "none";
+                }
+            });
+
+            /* get #age_not_ok(radio button 'no') and add click listener */
+            let inputNo = document.getElementById("age_not_ok");
+            inputNo.addEventListener("click", function () {
+                if (inputNo.checked == true) {
+                    /* Display error message with appropriate styles */
+                    err_msg.style.display = "block";
+                    err_msg.style.color = "red";
+                    err_msg.style.fontWeight = "bold";
+                    err_msg.style.fontSize = "larger";
+
+                    /* Hide upload option */
+                    proceed.style.display = "none";
+                }
+            });
+
+        });
+    </script>
+
+    <!--Link to local script for form validation-->
+    <script src="scripts/validation.js"></script>
+
+    <!--Adding a link to the site's favicon-->
+    <link rel="icon" href="images/favicon.ico">
+
+    <!--link to local stylesheet-->
+    <link rel="stylesheet" href="styles/site.css">
+
+    <!--links to font family from google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+
+    <title>Walpole-Pizza Join Us Page</title>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <div class="main-banner-container">
+                <h1>Walpole Pizza</h1>
+            </div>
+        </a>
+        <div class="rest-of-header-container">
+            <div class="header-image">
+                <p class="image-text">image of a pizza margherita</p>
+            </div>
+            <div class="header-schedule-container">
+                <h2>Original Italian Pizza Recipes <br />Open 7 days a week</h2>
+                <ul class="schedule">
+                    <li>Friday - Sunday | 10:30AM - 11:00PM</li>
+                    <li>Monday - Thursday | 11:00AM - 10:00PM</li>
+                </ul>
+            </div>
+            <nav class="header-navigation-container">
+                <ul class="navigation">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="kids-menu.html">Kids Menu</a></li>
+                    <li><a href="#">Order</a></li>
+                    <li><a href="#">Review Us</a></li>
+                    <li><a class="current-location" href="join-us.html">Join Us</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+        <main id="join-us-main">
+            <form id="application_form" method="post" action="https://cs12.net/form/submit.php">
+                <!-- Email form setup begin -->
+                <input type="hidden" name="__mailto" value="eldi_prifti@harvard.edu" />
+                <input type="hidden" name="__mailkey" value="cscis12-summer-2021-elp882" />
+                <!-- Email form setup completed -->
+                <h2>Walpole Pizza Job Application Form</h2>
+                <p>Please provide the following information to be considered for our current or future openings.<br />
+                <strong>***We do not share your information with any third parties***</strong></p>
+
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <p>All fields marked with an <span class="asterisk">(*)</span> are required</p>
+                    <ul>
+                        <li>
+                            <label for="fname">First name<span class="asterisk">*</span></label>
+                            <br />
+                            <input id="fname" type="text" name="first_name" class="required" />
+                        </li>
+                        <li>
+                            <label for="lname">Last name<span class="asterisk">*</span></label>
+                            <br />
+                            <input id="lname" type="text" name="last_name" class="required" />
+                        </li>
+                        <li>
+                            <label for="email">Email<span class="asterisk">*</span></label>
+                            <br />
+                            <input id="email" type="text" name="email address" class="required email" />
+                        </li>
+                        <li>
+                            <label for="phone">Phone number <span id="phone_format">-- Please, use US
+                                    format:(123)456-7890</span></label> <br />
+                            <!--The phone number is not required, but if entered, the form will only accept US phone number format-->
+                            <input id="phone" type="text" placeholder="(123)456-7890" class="phoneUS" />
+                        </li>
+                        <li>
+                            <p>Are you at least 18 years old?</p>
+                            <input type="radio" id="age_ok" name="age" value="18 or older" />
+                            <label for="age_ok">Yes</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="age_not_ok" name="age" value="under 18">
+                            <label for="age_not_ok">No</label>
+                        </li>
+                        <li id="no_upload_allowed">
+                            <p>Sorry, you must be at least 18 to continue. This application will not be considered.</p>
+                        </li>
+                        <li id="ok_to_upload">
+                            <label for="resume"><span class="asterisk">*</span>Please, upload a resume file. Make sure
+                                your file is in <em>pdf</em> or <em>word</em> format.</label>
+                            <br />
+
+                            <!--the "accept" attribute requires the "name" attribute in the input element  to be present in order to properly do the validation with mimetype for the file.-->
+                            <input type="file" id="resume" name="file_path"
+                                accept="application/pdf,.doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+                                class="required" />
+                        </li>
+                    </ul>
+                </fieldset>
+                <p id="show-submit">Click <strong>Submit your application</strong> to complete the process.<br />
+                    <input type="submit" id="submit_application" value="Submit your application" />
+                </p>
+            </form>
+        </main>
+
+    <footer>
+        <div class="footer-banner">
+            <h3>Walpole Pizza</h3>
+        </div>
+
+        <nav class="footer-navigation-container">
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="kids-menu.html">Kids Menu</a></li>
+                <li><a href="#">Order</a></li>
+                <li><a href="#">Review Us</a></li>
+                <li><a class="current-location" href="join-us.html">Join Us</a></li>
+            </ul>
+        </nav>
+        <div class="footer-info">
+            <address>
+                <p>940 Washington Street</p>
+                <p>Walpole, Massachusetts, 02081</p>
+                <p>Call: (617) 781-4444</p>
+                <p>email: <a href="#">info@walpolepizza.com</a></p>
+            </address>
+        </div>
+        <div class="footer-schedule-container">
+            <h3>Open 7 days a week</h3>
+            <p>Friday - Sunday | 10:30AM - 11:00PM</p>
+            <p>Monday - Thursday | 11:00AM - 10:00PM</p>
+        </div>
+        <div class="social-links">
+            <h3 class="footer-headings">Follow us on social media</h3>
+            <figure>
+                <img src="images/facebook-48px.png" alt="facebook icon" />
+                <figcaption><a href="#">Facebook</a></figcaption>
+            </figure>
+            <figure>
+                <img src="images/instagram-48px.png" alt="instagram icon" />
+                <figcaption><a href="#">Instagram</a></figcaption>
+            </figure>
+            <figure>
+                <img src="images/tweet-48px.png" alt="twitter icon" />
+                <figcaption><a href="#">Twitter</a></figcaption>
+            </figure>
+        </div>
+    </footer>
+</body>
+
+</html>
